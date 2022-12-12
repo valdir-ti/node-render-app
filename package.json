@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsc",
     "start": "node ./dist/server.js",
-    "dev": "npx ts-node ./src/server.ts"
+    "dev": "npx ts-node ./src/server.ts",
+    "postinstall": "tsc",
+    "restore": "yarn cache clean --force  && rm -rf node_modules && rm -rf yarn.lock && yarn install"
   },
   "keywords": [],
   "author": "",
